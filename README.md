@@ -12,4 +12,12 @@ Estas operações deverão ser disponibilizadas a partir de uma interface textua
 
 ##Instruções
   - Executar o *MARS* no mesmo diretório em que o arquivo *"image.raw"* se encontra;
+  - Configuração da memória:
+    - *default*
   - Ao abrir o *MARS*, deve-se abrir o **Bitmap Display**, localizado na aba *Tools*.
+  - Configuração do *Bitmap Display*:
+    - Unidade de largura em *pixels*: 4
+    - Unidade de altura em *pixels*: 4
+    - Largura do *display*: 256
+    - Altura do *display*: 256
+    - Endereço base do *display*: 0x10040000 (**heap**) 
