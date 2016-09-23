@@ -14,7 +14,7 @@ Estas operações deverão ser disponibilizadas a partir de uma interface textua
   - Executar o *MARS* no mesmo diretório em que o arquivo *"image.raw"* se encontra;
   - Configuração da memória:
     - *default*
-  - Ao abrir o *MARS*, deve-se abrir o **Bitmap Display**, localizado na aba *Tools*.
+  - Ao abrir o *MARS*, após abrir o arquivo **Trabalho3.asm**, deve-se abrir o **Bitmap Display**, localizado na aba *Tools*;
   - Configuração do *Bitmap Display*:
     - Unidade de largura em *pixels*: 4
     - Unidade de altura em *pixels*: 4
