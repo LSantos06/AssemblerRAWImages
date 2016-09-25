@@ -73,13 +73,20 @@ menu:
 	li $v0, 5 # Le um valor inteiro do teclado
 	syscall 
 	
-	move $s7, $v0 # Armazena a escolha em $s7 para o caso de load_img || grey
+	# Variaveis
+	la $s1, buffer # Carrega o endereco do buffer
+	
+	add $s2, $zero, 0x10040000 # Endereco do heap 
+	
+	add $t0, $zero, $zero # Contador iniciado com 0
+	
+	addi $t1, $zero, 3 # Le 1 pixel
 	
 	# Menu
 	beq $v0, 1, read_img # -> load_img
 	beq $v0, 2, get_pixel # -> get_pixel
 	beq $v0, 3, set_pixel # -> set_pixel
-	beq $v0, 4, read_img # -> grey
+	beq $v0, 4, grey # -> grey
 	beq $v0, 5, exit # -> exit
 	
 	j menu # loop
@@ -108,17 +115,7 @@ read_img:
 	
 	move $s0, $v0 # Salva o file descriptor
 	
-	# Variaveis
-	la $s1, buffer # Carrega o endereco do buffer
-	
-	add $s2, $zero, 0x10040000 # Endereco do heap 
-	
-	add $t0, $zero, $zero # Contador iniciado com 0
-	
-	addi $t1, $zero, 3 # Le 1 pixel
-	
-	beq $s7, 1, load_img # -> load_img
-	beq $s7, 4, grey # -> grey
+	j load_img
 	
 load_img:
 	# Convertendo para 4 bytes	
@@ -369,12 +366,8 @@ grey:
 	# Convertendo para 4 bytes	
 	beq $t0, 12288, close_img
 	
-	# Leitura do arquivo	
-	addi $v0, $zero, 14 # Codigo para ler um arquivo
-	move $a0, $s0 # File descriptor
-	la $a1, buffer
-	la $a2, 0($t1) # Le 1 pixel
-	syscall
+	# Buffer
+	add $s1, $zero, $s2 
 	
 	# Calculando a media
 	lbu $t2, 0($s1) # Armazena o B, 0x000000BB => 0xBB
@@ -398,6 +391,8 @@ grey:
 	
 	# Incrementando as variaveis do laco
 	addi $t0, $t0, 3 # Incrementa o contador em 3, numero de bytes lidos
+	
+	addi $s1, $s1, 4 # Proximo pixel do heap
 	
 	addi $s2, $s2, 4 # Proximo pixel do display
 	
