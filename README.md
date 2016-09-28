@@ -1,5 +1,12 @@
 # AssemblerRAWImages
-Trabalho 3 de Organizacão e Arquitetura de Computadores
+##Trabalho 3 de Organizacão e Arquitetura de Computadores
+
+<p align="center">
+  <img src="lena.png">
+  <br>
+  <t>Imagem <b>"image.raw"</b> utilizada para demonstração do funcionamento do trabalho.</t>
+  <br>
+</p>
 
 O trabalho consiste no desenvolvimento de algumas funções para manipulação de imagens **.RAW**. As operações a serem
 implementadas são:
@@ -9,13 +16,6 @@ implementadas são:
   - Conversão para cinza.
   
 Estas operações deverão ser disponibilizadas a partir de uma interface textual com o usuário. O arquivo contendo a imagem deve chamar-se **“image.raw”**.
-
-<p align="center">
-  <img src="lena.png">
-  <br>
-  <t>Imagem <b>"image.raw"</b> utilizada para demonstração do funcionamento do trabalho.</t>
-  <br>
-</p>
 
 ##Instruções
   - Executar o *MARS* no mesmo diretório em que o arquivo **"image.raw"** se encontra;
