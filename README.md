@@ -13,7 +13,7 @@ Estas operações deverão ser disponibilizadas a partir de uma interface textua
 <p align="center">
   <img src="lena.png">
   <br>
-  <t>Imagem <b>"image.raw"</b> utilizada para demonstração.</t>
+  <t>Imagem <b>"image.raw"</b> utilizada para demonstração do funcionamento do trabalho.</t>
   <br>
 </p>
 
