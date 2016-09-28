@@ -10,8 +10,15 @@ implementadas são:
   
 Estas operações deverão ser disponibilizadas a partir de uma interface textual com o usuário. O arquivo contendo a imagem deve chamar-se **“image.raw”**.
 
+<p align="center">
+  <img src="lena.png">
+  <br>
+  <t>Imagem <b>"image.raw"</b> utilizada para demonstração.</t>
+  <br>
+</p>
+
 ##Instruções
-  - Executar o *MARS* no mesmo diretório em que o arquivo *"image.raw"* se encontra;
+  - Executar o *MARS* no mesmo diretório em que o arquivo **"image.raw"** se encontra;
   - Configuração da memória:
     - *default*
   - Ao abrir o *MARS*, após abrir o arquivo **Trabalho3.asm**, deve-se abrir o **Bitmap Display**, localizado na aba *Tools*;
